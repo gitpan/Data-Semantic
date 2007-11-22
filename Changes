@@ -4,6 +4,13 @@ global:
 releases:
   - author: 'Marcel Gruenauer <marcel@cpan.org>'
     changes:
+      - set the version to 0.02
+      - 'Makefile.PL: now requires Test::CompanionClasses 0.03; earlier versions had a bug in make_real_object()'
+    date: 2007-11-22T13:08:38Z
+    tags: []
+    version: 0.02
+  - author: 'Marcel Gruenauer <marcel@cpan.org>'
+    changes:
       - original version
       - 'Data::Semantic::Base: is_valid_normalized_value() also requires the value to be well-formed'
       - 'Data::Semantic::RegexpAdapter: is_valid_normalized_value() just calls is_well_formed() - is that right?'

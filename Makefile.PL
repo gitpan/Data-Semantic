@@ -8,7 +8,7 @@ perl_version '5.006';
 requires 'Class::Accessor::Complex';
 requires 'Data::Inherited';
 requires 'Regexp::Common';
-requires 'Test::CompanionClasses';
+requires 'Test::CompanionClasses' => '0.03';
 
 build_requires 'Test::Differences';
 build_requires 'Test::More' => '0.70';

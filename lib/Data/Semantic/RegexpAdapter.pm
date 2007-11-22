@@ -5,7 +5,7 @@ use warnings;
 use Regexp::Common;
 
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 
 use base qw(
@@ -317,7 +317,7 @@ please use the C<datasemantic> tag.
 
 =head1 VERSION 
                    
-This document describes version 0.01 of L<Data::Semantic::RegexpAdapter>.
+This document describes version 0.02 of L<Data::Semantic::RegexpAdapter>.
 
 =head1 BUGS AND LIMITATIONS
 

@@ -22,6 +22,6 @@ requires:
   Class::Accessor::Complex: 0
   Data::Inherited: 0
   Regexp::Common: 0
-  Test::CompanionClasses: 0
+  Test::CompanionClasses: 0.03
   perl: 5.6.0
-version: 0.01
+version: 0.02

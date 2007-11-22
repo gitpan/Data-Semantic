@@ -5,7 +5,7 @@ use warnings;
 use Test::More;
 
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 
 use base 'Test::CompanionClasses::Base';
@@ -195,7 +195,7 @@ please use the C<datasemantic> tag.
 
 =head1 VERSION 
                    
-This document describes version 0.01 of L<Data::Semantic::Test>.
+This document describes version 0.02 of L<Data::Semantic::Test>.
 
 =head1 BUGS AND LIMITATIONS
 
