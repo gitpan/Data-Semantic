@@ -1,30 +1,37 @@
----
-global:
-  name: Data-Semantic
-releases:
-  - author: 'Marcel Gruenauer <marcel@cpan.org>'
-    changes:
-      - set the version to 0.02
-      - 'Makefile.PL: now requires Test::CompanionClasses 0.03; earlier versions had a bug in make_real_object()'
-    date: 2007-11-22T13:08:38Z
-    tags: []
-    version: 0.02
-  - author: 'Marcel Gruenauer <marcel@cpan.org>'
-    changes:
-      - original version
-      - 'Data::Semantic::Base: is_valid_normalized_value() also requires the value to be well-formed'
-      - 'Data::Semantic::RegexpAdapter: is_valid_normalized_value() just calls is_well_formed() - is that right?'
-      - 'Data::Semantic::Test: now deals with TESTDATA instead of well_formed(), not_well_formed(), valid() and invalid()'
-      - updated MANIFEST
-      - deleted lib/Data/Semantic/RegexpTest.pm
-      - getting rid of the distinction between well-formedness and validity. Only validity remains
-      - deleted lib/Data/Semantic.pm
-      - moveed Data::Semantic::Base to Data::Semantic
-      - deleted lib/Data/Semantic/Base.pm
-      - started to add documentation
-      - 'Data::Semantic::RegexpAddapter: keep() is now a boolean attribute'
-      - 'Data::Semantic::Test: added documentation'
-      - updated t/perlcriticrc
-    date: 2007-11-21T18:22:03Z
-    tags: []
-    version: 0.01
+Revision history for Perl extension Data-Semantic
+
+0.04  Thu 2010.02.11 15:03:36 CET (Marcel Gruenauer <marcel@cpan.org>)
+     - Changed dist style and Changes back to standard. People didn't like it -
+       the nail that sticks out gets hammered down.
+     - Added standard test files; this will also help with CPANTS.
+
+0.03  Thu, 29 May 2008 12:03:26 -0000 (Marcel Gruenauer <marcel@cpan.org>)
+     - set the version to 0.03
+     - moved generated documentation of interited methods to after
+       documentation of this class' methods so the manpage is more readable
+     - .shipit: fixed svk.tagpattern
+
+0.02  Thu, 22 Nov 2007 13:08:38 -0000 (Marcel Gruenauer <marcel@cpan.org>)
+     - set the version to 0.02
+     - Makefile.PL: now requires Test::CompanionClasses 0.03; earlier versions
+       had a bug in make_real_object()
+
+0.01  Wed, 21 Nov 2007 18:22:03 -0000 (Marcel Gruenauer <marcel@cpan.org>)
+     - original version
+     - Data::Semantic::Base: is_valid_normalized_value() also requires the
+       value to be well-formed
+     - Data::Semantic::RegexpAdapter: is_valid_normalized_value() just calls
+       is_well_formed() - is that right?
+     - Data::Semantic::Test: now deals with TESTDATA instead of well_formed(),
+       not_well_formed(), valid() and invalid()
+     - updated MANIFEST
+     - deleted lib/Data/Semantic/RegexpTest.pm
+     - getting rid of the distinction between well-formedness and validity.
+       Only validity remains
+     - deleted lib/Data/Semantic.pm
+     - moveed Data::Semantic::Base to Data::Semantic
+     - deleted lib/Data/Semantic/Base.pm
+     - started to add documentation
+     - Data::Semantic::RegexpAddapter: keep() is now a boolean attribute
+     - Data::Semantic::Test: added documentation
+     - updated t/perlcriticrc
