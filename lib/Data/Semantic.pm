@@ -1,9 +1,11 @@
-package Data::Semantic;
-use 5.006;
+use 5.008;
 use strict;
 use warnings;
-our $VERSION = '0.04';
-use base qw(Class::Accessor::Complex);
+
+package Data::Semantic;
+our $VERSION = '1.100820';
+# ABSTRACT: Common API for data with semantics attached to them
+use parent qw(Class::Accessor::Complex);
 __PACKAGE__->mk_new;
 
 sub is_valid {
@@ -26,15 +28,18 @@ sub is_valid_normalized_value {
     defined $normalized;
 }
 1;
+
+
 __END__
+=pod
 
 =head1 NAME
 
 Data::Semantic - Common API for data with semantics attached to them
 
-=head1 SYNOPSIS
+=head1 VERSION
 
-    Data::Semantic->new;
+version 1.100820
 
 =head1 DESCRIPTION
 
@@ -70,9 +75,7 @@ If you have a new type of semantic data, here is how you can handle it.
 
 =head1 METHODS
 
-=over 4
-
-=item C<new>
+=head2 new
 
     my $obj = Data::Semantic->new;
     my $obj = Data::Semantic->new(%args);
@@ -83,34 +86,51 @@ component is initialized by calling the method of the same name with the given
 value. If called with a single hash reference, it is dereferenced and its
 key/value pairs are set as described before.
 
-=back
+=head2 is_valid
+
+FIXME
+
+=head2 is_valid_normalized_value
+
+FIXME
+
+=head2 normalize
+
+FIXME
+
+=head1 INSTALLATION
+
+See perlmodinstall for information and options on installing Perl modules.
 
 =head1 BUGS AND LIMITATIONS
 
 No bugs have been reported.
 
 Please report any bugs or feature requests through the web interface at
-L<http://rt.cpan.org>.
-
-=head1 INSTALLATION
-
-See perlmodinstall for information and options on installing Perl modules.
+L<http://rt.cpan.org/Public/Dist/Display.html?Name=Data-Semantic>.
 
 =head1 AVAILABILITY
 
 The latest version of this module is available from the Comprehensive Perl
-Archive Network (CPAN). Visit <http://www.perl.com/CPAN/> to find a CPAN
-site near you. Or see L<http://search.cpan.org/dist/Data-Semantic/>.
+Archive Network (CPAN). Visit L<http://www.perl.com/CPAN/> to find a CPAN
+site near you, or see
+L<http://search.cpan.org/dist/Data-Semantic/>.
 
-=head1 AUTHORS
+The development version lives at
+L<http://github.com/hanekomu/Data-Semantic/>.
+Instead of sending patches, please fork this project using the standard git
+and github infrastructure.
 
-Marcel GrE<uuml>nauer, C<< <marcel@cpan.org> >>
+=head1 AUTHOR
+
+  Marcel Gruenauer <marcel@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2007-2009 by the authors.
+This software is copyright (c) 2007 by Marcel Gruenauer.
 
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut
+

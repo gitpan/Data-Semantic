@@ -1,9 +1,10 @@
+
 This is the Perl distribution Data-Semantic.
 
 ## Installation
 
-Data-Semantic installation is straightforward. If your CPAN shell is
-set up, you should just be able to do
+Data-Semantic installation is straightforward.
+If your CPAN shell is set up, you should just be able to do
 
     % cpan Data::Semantic
 
@@ -18,10 +19,9 @@ Then install it:
 
 ## Documentation
 
-Data-Semantic documentation is available as in POD. So you can do:
+Data-Semantic documentation is available as in POD.
+So you can do:
 
     % perldoc Data::Semantic
 
-to read the documentation online with your favorite pager.
-
-Marcel Gruenauer
+to read the documentation with your favorite pager.

@@ -1,9 +1,12 @@
-package Data::Semantic::Test;
+use 5.008;
 use strict;
 use warnings;
+
+package Data::Semantic::Test;
+our $VERSION = '1.100820';
+# ABSTRACT: Testing Data::Semantic objects
 use Test::More;
-our $VERSION = '0.04';
-use base 'Test::CompanionClasses::Base';
+use parent 'Test::CompanionClasses::Base';
 
 sub PLAN {
     my $self = shift;
@@ -52,15 +55,18 @@ sub run {
     }
 }
 1;
+
+
 __END__
+=pod
 
 =head1 NAME
 
 Data::Semantic::Test - Testing Data::Semantic objects
 
-=head1 SYNOPSIS
+=head1 VERSION
 
-    Data::Semantic::Test->new;
+version 1.100820
 
 =head1 DESCRIPTION
 
@@ -120,37 +126,59 @@ See L<Test::CompanionClasses> for more information on how these tests are run.
 
 =head1 METHODS
 
-=over 4
+=head2 PLAN
 
-=back
+FIXME
+
+=head2 run
+
+FIXME
+
+=head2 munge_args
+
+FIXME
+
+=head2 test_is_invalid
+
+FIXME
+
+=head2 test_is_valid
+
+FIXME
+
+=head1 INSTALLATION
+
+See perlmodinstall for information and options on installing Perl modules.
 
 =head1 BUGS AND LIMITATIONS
 
 No bugs have been reported.
 
 Please report any bugs or feature requests through the web interface at
-L<http://rt.cpan.org>.
-
-=head1 INSTALLATION
-
-See perlmodinstall for information and options on installing Perl modules.
+L<http://rt.cpan.org/Public/Dist/Display.html?Name=Data-Semantic>.
 
 =head1 AVAILABILITY
 
 The latest version of this module is available from the Comprehensive Perl
-Archive Network (CPAN). Visit <http://www.perl.com/CPAN/> to find a CPAN
-site near you. Or see L<http://search.cpan.org/dist/Data-Semantic/>.
+Archive Network (CPAN). Visit L<http://www.perl.com/CPAN/> to find a CPAN
+site near you, or see
+L<http://search.cpan.org/dist/Data-Semantic/>.
 
-=head1 AUTHORS
+The development version lives at
+L<http://github.com/hanekomu/Data-Semantic/>.
+Instead of sending patches, please fork this project using the standard git
+and github infrastructure.
 
-Marcel GrE<uuml>nauer, C<< <marcel@cpan.org> >>
+=head1 AUTHOR
+
+  Marcel Gruenauer <marcel@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2007-2009 by the authors.
+This software is copyright (c) 2007 by Marcel Gruenauer.
 
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut
 

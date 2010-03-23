@@ -1,8 +1,8 @@
 NAME
     Data::Semantic - Common API for data with semantics attached to them
 
-SYNOPSIS
-        Data::Semantic->new;
+VERSION
+    version 1.100820
 
 DESCRIPTION
     There are various distributions on CPAN dealing with data that has
@@ -36,38 +36,52 @@ DESCRIPTION
         make an adapter class for Data::Domain
 
 METHODS
-    "new"
-            my $obj = Data::Semantic->new;
-            my $obj = Data::Semantic->new(%args);
+  new
+        my $obj = Data::Semantic->new;
+        my $obj = Data::Semantic->new(%args);
 
-        Creates and returns a new object. The constructor will accept as
-        arguments a list of pairs, from component name to initial value. For
-        each pair, the named component is initialized by calling the method
-        of the same name with the given value. If called with a single hash
-        reference, it is dereferenced and its key/value pairs are set as
-        described before.
+    Creates and returns a new object. The constructor will accept as
+    arguments a list of pairs, from component name to initial value. For
+    each pair, the named component is initialized by calling the method of
+    the same name with the given value. If called with a single hash
+    reference, it is dereferenced and its key/value pairs are set as
+    described before.
 
-BUGS AND LIMITATIONS
-    No bugs have been reported.
+  is_valid
+    FIXME
 
-    Please report any bugs or feature requests through the web interface at
-    <http://rt.cpan.org>.
+  is_valid_normalized_value
+    FIXME
+
+  normalize
+    FIXME
 
 INSTALLATION
     See perlmodinstall for information and options on installing Perl
     modules.
 
+BUGS AND LIMITATIONS
+    No bugs have been reported.
+
+    Please report any bugs or feature requests through the web interface at
+    <http://rt.cpan.org/Public/Dist/Display.html?Name=Data-Semantic>.
+
 AVAILABILITY
     The latest version of this module is available from the Comprehensive
     Perl Archive Network (CPAN). Visit <http://www.perl.com/CPAN/> to find a
-    CPAN site near you. Or see <http://search.cpan.org/dist/Data-Semantic/>.
+    CPAN site near you, or see <http://search.cpan.org/dist/Data-Semantic/>.
 
-AUTHORS
-    Marcel Grünauer, "<marcel@cpan.org>"
+    The development version lives at
+    <http://github.com/hanekomu/Data-Semantic/>. Instead of sending patches,
+    please fork this project using the standard git and github
+    infrastructure.
+
+AUTHOR
+      Marcel Gruenauer <marcel@cpan.org>
 
 COPYRIGHT AND LICENSE
-    Copyright 2007-2009 by the authors.
+    This software is copyright (c) 2007 by Marcel Gruenauer.
 
-    This library is free software; you can redistribute it and/or modify it
-    under the same terms as Perl itself.
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
 
