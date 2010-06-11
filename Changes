@@ -1,5 +1,9 @@
 Revision history for Perl extension Data-Semantic
 
+1.101620  2010-06-11 09:35:39 Europe/Vienna
+    - perltidy
+    - added support for test data for normalize()
+
 1.100820  2010-03-23 17:14:39 Europe/Vienna
     - converted the distribution to Dist::Zilla-style
 

@@ -3,19 +3,18 @@ use strict;
 use warnings;
 
 package Data::Semantic::RegexpAdapter;
-our $VERSION = '1.100820';
+BEGIN {
+  $Data::Semantic::RegexpAdapter::VERSION = '1.101620';
+}
+
 # ABSTRACT: Adapter for Regexp::Common patterns
 use Regexp::Common;
 use parent qw(
   Data::Semantic
   Data::Inherited
 );
-#<<<
-__PACKAGE__
-    ->mk_scalar_accessors(qw(re))
-    ->mk_boolean_accessors(qw(keep))
-    ->mk_hash_accessors(qw(kept));
-#>>>
+__PACKAGE__->mk_scalar_accessors(qw(re))->mk_boolean_accessors(qw(keep))
+  ->mk_hash_accessors(qw(kept));
 use constant LOAD        => '';
 use constant REGEXP_KEYS => ();
 use constant KEEP_KEYS   => ();
@@ -66,7 +65,7 @@ Data::Semantic::RegexpAdapter - Adapter for Regexp::Common patterns
 
 =head1 VERSION
 
-version 1.100820
+version 1.101620
 
 =head1 METHODS
 
@@ -122,7 +121,7 @@ See perlmodinstall for information and options on installing Perl modules.
 No bugs have been reported.
 
 Please report any bugs or feature requests through the web interface at
-L<http://rt.cpan.org/Public/Dist/Display.html?Name=Data-Semantic>.
+L<http://rt.cpan.org>.
 
 =head1 AVAILABILITY
 

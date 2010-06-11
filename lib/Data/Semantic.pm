@@ -3,7 +3,10 @@ use strict;
 use warnings;
 
 package Data::Semantic;
-our $VERSION = '1.100820';
+BEGIN {
+  $Data::Semantic::VERSION = '1.101620';
+}
+
 # ABSTRACT: Common API for data with semantics attached to them
 use parent qw(Class::Accessor::Complex);
 __PACKAGE__->mk_new;
@@ -39,7 +42,7 @@ Data::Semantic - Common API for data with semantics attached to them
 
 =head1 VERSION
 
-version 1.100820
+version 1.101620
 
 =head1 DESCRIPTION
 
@@ -107,7 +110,7 @@ See perlmodinstall for information and options on installing Perl modules.
 No bugs have been reported.
 
 Please report any bugs or feature requests through the web interface at
-L<http://rt.cpan.org/Public/Dist/Display.html?Name=Data-Semantic>.
+L<http://rt.cpan.org>.
 
 =head1 AVAILABILITY
 

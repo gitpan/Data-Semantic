@@ -3,7 +3,10 @@ use strict;
 use warnings;
 
 package Data::Semantic::Test;
-our $VERSION = '1.100820';
+BEGIN {
+  $Data::Semantic::Test::VERSION = '1.101620';
+}
+
 # ABSTRACT: Testing Data::Semantic objects
 use Test::More;
 use parent 'Test::CompanionClasses::Base';
@@ -12,9 +15,11 @@ sub PLAN {
     my $self = shift;
     my $plan = 0;
     for my $test ($self->TESTDATA) {
-
-        # see run() about the multipliers
-        $plan += @{ $test->{valid} || [] } + @{ $test->{invalid} || [] };
+        my %normalize = %{ $test->{normalize} || {} };
+        $plan +=
+          @{ $test->{valid}   || [] } +
+          @{ $test->{invalid} || [] } +
+          keys %normalize;
     }
     $plan;
 }
@@ -32,6 +37,11 @@ sub test_is_valid {
 sub test_is_invalid {
     my ($self, $obj, $value, $testname) = @_;
     ok(!$obj->is_valid($value), $testname);
+}
+
+sub test_normalize {
+    my ($self, $obj, $value, $expect, $testname) = @_;
+    is($obj->normalize($value), $expect, $testname);
 }
 
 sub run {
@@ -52,6 +62,10 @@ sub run {
         # so add these tests as well.
         $self->test_is_invalid($obj, $_, "INVALID $args: $_")
           for @{ $test->{invalid} || [] };
+        my %normalize = %{ $test->{normalize} || {} };
+        while (my ($value, $expect) = each %normalize) {
+            $self->test_normalize($obj, $value, $expect, "normalize($value)");
+        }
     }
 }
 1;
@@ -66,7 +80,7 @@ Data::Semantic::Test - Testing Data::Semantic objects
 
 =head1 VERSION
 
-version 1.100820
+version 1.101620
 
 =head1 DESCRIPTION
 
@@ -88,6 +102,10 @@ define the following structure:
                 http://?123
                 https://localhost/
             ) ],
+            normalize => {
+                foo => 'bar',
+                baz => undef,
+            },
         },
         {
             args => { scheme => 'https?' },
@@ -146,6 +164,10 @@ FIXME
 
 FIXME
 
+=head2 test_normalize
+
+FIXME
+
 =head1 INSTALLATION
 
 See perlmodinstall for information and options on installing Perl modules.
@@ -155,7 +177,7 @@ See perlmodinstall for information and options on installing Perl modules.
 No bugs have been reported.
 
 Please report any bugs or feature requests through the web interface at
-L<http://rt.cpan.org/Public/Dist/Display.html?Name=Data-Semantic>.
+L<http://rt.cpan.org>.
 
 =head1 AVAILABILITY
 
